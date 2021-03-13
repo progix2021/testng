@@ -1,0 +1,7 @@
+<suite name="TmpSuite">
+    <test name="TmpTest">
+        <classes>
+            <class name="com.sample.AppTest" />
+        </classes>
+    </test>
+</suite>
