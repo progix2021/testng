@@ -9,7 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -23,11 +23,11 @@ public class AppTest {
     @Test
     public void shouldAnswerWithTrue() throws InterruptedException, IOException {
         System.out.println("Sample");
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        WebDriverManager.firefoxdriver().setup();
+        WebDriver driver = new FirefoxDriver();
         driver.get("https://www.google.co.in");
         WebElement element = driver.findElement(By.name("q"));
-        element.sendKeys("Cats");
+        element.sendKeys("Dogs");
         Thread.sleep(1000);
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File file = screenshot.getScreenshotAs(OutputType.FILE);
